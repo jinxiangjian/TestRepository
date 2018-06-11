@@ -1,10 +1,4 @@
-
-
-import javax.annotation.processing.AbstractProcessor;
-import java.util.ArrayList;
-import java.util.List;
-
-public class JVMTest {
+public class JVMOOMTest {
     private static final int _1MB = 1024 * 1024;
 
     public static void main(String[] args) throws InterruptedException{
@@ -33,10 +27,10 @@ public class JVMTest {
 
         System.out.println(ClassLoader.getSystemClassLoader());
 
-        System.out.println(JVMTest.class.getClassLoader().getParent().getParent());
+        System.out.println(JVMOOMTest.class.getClassLoader().getParent().getParent());
         System.out.println(OOMObject.class.getClassLoader());
 
 
-        AbstractProcessor
+
     }
 }

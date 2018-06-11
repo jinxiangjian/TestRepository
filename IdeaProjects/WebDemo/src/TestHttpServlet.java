@@ -6,9 +6,12 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.Enumeration;
 
 public class TestHttpServlet extends HttpServlet{
+    private static String message = "Hello World!";
+
     @Override
     public void destroy() {
         super.destroy();
@@ -71,7 +74,10 @@ public class TestHttpServlet extends HttpServlet{
     }
 
     @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) {
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException{
         System.out.println("From doGet");
+        resp.setContentType("text/html");
+        PrintWriter writer = resp.getWriter();
+        writer.write("<h1>" + message + "</h1>");
     }
 }
