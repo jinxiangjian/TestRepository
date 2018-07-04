@@ -1,0 +1,20 @@
+/HotelService/src/main/resources/proto
+/TcpGateway4j/src/main/config/gateway.properties
+# IntelliJ project files
+.idea
+*.iml
+*.ipr
+*.iws
+out
+gen
+catalina.home_IS_UNDEFINED
+log.server_IS_UNDEFINED
+
+# protobuf files
+*.proto
+
+# Maven
+target/
+*.ser
+*.ec
+*.class

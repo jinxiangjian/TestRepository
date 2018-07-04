@@ -17,7 +17,7 @@ public class JVMTest {
         alloction3 = new byte[2 * _1MB];
         alloction4 = new byte[4 * _1MB];
 
-        List<OOMObject> list = new ArrayList<>();
+        List<OOMObject> list = new ArrayList<OOMObject>();
         for(int i = 0; i< 110;i++){
             Thread.sleep(50);
             list.add(new OOMObject());

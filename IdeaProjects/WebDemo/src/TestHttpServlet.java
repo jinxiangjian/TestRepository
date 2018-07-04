@@ -79,5 +79,9 @@ public class TestHttpServlet extends HttpServlet{
         resp.setContentType("text/html");
         PrintWriter writer = resp.getWriter();
         writer.write("<h1>" + message + "</h1>");
+
+        String name =new String(req.getParameter("name").getBytes("ISO8859-1"),"UTF-8");
+        String url = new String(req.getParameter("url"));
+        writer.write(name + url);
     }
 }
